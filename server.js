@@ -15,7 +15,7 @@ const NIM_API_BASE = process.env.NIM_API_BASE || 'https://integrate.api.nvidia.c
 const NIM_API_KEY = process.env.NIM_API_KEY;
 
 // 🔥 REASONING DISPLAY TOGGLE
-const SHOW_REASONING = false;
+const SHOW_REASONING = TRUE;
 
 // 🔥 THINKING MODE TOGGLE
 const ENABLE_THINKING_MODE = false;
@@ -37,7 +37,7 @@ app.get('/health', (req, res) => {
     status: 'ok', 
     service: 'OpenAI to NVIDIA NIM Proxy',
     platform: 'Render',
-    reasoning_display: SHOW_REASONING = TRUE,
+    reasoning_display: SHOW_REASONING,
     thinking_mode: ENABLE_THINKING_MODE
   });
 });
